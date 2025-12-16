@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cards — Retail Banking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">Bank<span>Pro</span></div>
+      <div class="brand-text">
+        <h1>Cards</h1>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="transfer.html">Fund Transfer</a>
+      <a href="cards.html" class="active">Cards</a>
+      <a href="statements.html">Statements</a>
+      <button id="authBtn" class="btn small">Login</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card-white">
+      <h2>Your Cards</h2>
+      <div id="cardsList">Loading cards...</div>
+
+      <h3 style="margin-top:20px">Apply New Card</h3>
+      <div class="apply-row">
+        <select id="newCardType">
+          <option>VISA</option>
+          <option>MasterCard</option>
+          <option>RUPAY</option>
+        </select>
+        <button class="btn" onclick="applyNewCard()">Apply Card</button>
+      </div>
+      <div id="applyResult" class="result"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 BankPro — Frontend demo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

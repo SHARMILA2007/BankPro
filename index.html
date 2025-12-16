@@ -1,0 +1,91 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Retail Banking Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">Bank<span>Pro</span></div>
+      <div class="brand-text">
+        <h1>Retail Banking Portal</h1>
+        <p class="tag">Secure • Simple • Professional</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="transfer.html">Fund Transfer</a>
+      <a href="cards.html">Cards</a>
+      <a href="statements.html">Statements</a>
+      <button id="authBtn" class="btn small">Login</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card-white">
+      <div class="hero-left">
+        <h2>Banking made effortless</h2>
+        <p>Transfer funds, manage credit cards and view statements — all from a secure, professional interface built for your portfolio.</p>
+        <div class="cta-row">
+          <a class="btn" href="transfer.html">Make a Transfer</a>
+          <a class="btn ghost" href="cards.html">Manage Cards</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="account-overview">
+          <h3>Your Accounts</h3>
+          <div id="accountList">Loading accounts...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature card-white">
+        <h4>Secure Transfers</h4>
+        <p>Instant validation, clear receipts, and same/different-bank modes.</p>
+      </div>
+      <div class="feature card-white">
+        <h4>Card Management</h4>
+        <p>Apply, view and block cards. Quick card controls for safety.</p>
+      </div>
+      <div class="feature card-white">
+        <h4>Statements</h4>
+        <p>Transaction history saved locally with CSV export.</p>
+      </div>
+    </section>
+
+    <section class="quick-actions card-white">
+      <h3>Quick Actions</h3>
+      <div class="quick-grid">
+        <div onclick="openPage('transfer.html')" class="qa">💸 Transfer Funds</div>
+        <div onclick="openPage('cards.html')" class="qa">💳 My Cards</div>
+        <div onclick="openPage('statements.html')" class="qa">📄 Statements</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 BankPro — Frontend-only demo for portfolio</p>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-card">
+      <h3>Sign in</h3>
+      <input id="loginUser" placeholder="Username" />
+      <input id="loginPass" placeholder="Password" type="password" />
+      <div class="modal-actions">
+        <button class="btn ghost" onclick="closeLogin()">Cancel</button>
+        <button class="btn" onclick="doLogin()">Sign in</button>
+      </div>
+      <p class="note">Demo users: <strong>sharmila / password123</strong> or <strong>john / johnpwd</strong></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

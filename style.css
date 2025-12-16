@@ -1,0 +1,85 @@
+/* Professional Banking Style (Blue / White / Grey) */
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --muted:#667085;
+  --brand1:#0b69ff;
+  --brand2:#0476d0;
+  --accent:#0b69ff;
+  --danger:#d64545;
+  --radius:12px;
+  --shadow: 0 8px 20px rgba(20,30,60,0.08);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#0f1724;line-height:1.4}
+
+/* Topbar */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 28px;background:linear-gradient(90deg,#ffffff,#f9fbff);box-shadow:0 4px 14px rgba(15,23,36,0.04)}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{font-weight:800;color:var(--brand1);font-size:20px}
+.logo span{color:var(--brand2)}
+.brand-text h1{font-size:16px;margin:0}
+.brand-text p{margin:0;font-size:12px;color:var(--muted)}
+.nav a{margin-left:16px;text-decoration:none;color:#1f2937;padding:8px 10px;border-radius:8px}
+.nav a.active{background:rgba(11,105,255,0.08);color:var(--brand1)}
+.btn{background:var(--brand1);color:white;padding:8px 12px;border:none;border-radius:10px;cursor:pointer;font-weight:600}
+.btn.ghost{background:transparent;color:var(--brand1);border:1px solid rgba(11,105,255,0.12)}
+.btn.small{padding:6px 8px;font-size:13px}
+
+/* Layout */
+.container{max-width:1100px;margin:22px auto;padding:0 18px}
+.card-white{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.hero{display:flex;gap:20px;padding:22px;align-items:stretch}
+.hero-left{flex:1}
+.hero-right{width:320px}
+.hero h2{font-size:24px;margin:0 0 8px}
+.hero p{color:var(--muted);margin:0 0 16px}
+.cta-row{display:flex;gap:12px;margin-top:12px}
+
+/* Features */
+.features{display:flex;gap:16px;margin-top:18px}
+.feature{flex:1;padding:16px;border-radius:10px}
+
+/* Quick actions */
+.quick-actions{margin-top:18px;padding:16px}
+.quick-grid{display:flex;gap:12px}
+.qa{background:#f8fbff;padding:14px;border-radius:10px;flex:1;text-align:center;cursor:pointer;border:1px solid rgba(7,41,93,0.03)}
+.footer{text-align:center;padding:16px;color:var(--muted);margin-top:18px}
+
+/* Forms */
+.form-card input[type="text"], .form-card input[type="number"], .form-card select{
+  width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #e6eef8;background:#fbfdff
+}
+.radio-row{display:flex;gap:18px;margin:6px 0}
+.actions-row{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+.result{margin-top:10px;color:var(--muted)}
+
+/* Cards list */
+#cardsList > .card-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;border:1px solid rgba(7,41,93,0.04);margin:8px 0;background:#fff}
+.card-item .meta{font-weight:600}
+.card-item .status{font-size:13px;color:var(--muted)}
+
+/* Statements */
+.filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.statements-table{overflow:auto}
+.table{width:100%;border-collapse:collapse}
+.table th, .table td{padding:10px;border-bottom:1px solid #f1f5fb;text-align:left}
+.table th{background:#fbfdff}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(8,16,32,0.45);display:flex;align-items:center;justify-content:center;z-index:40}
+.hidden{display:none}
+.modal-card{background:var(--card);padding:18px;border-radius:10px;min-width:320px;box-shadow:var(--shadow)}
+.modal-card input{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #e6eef8}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{flex-direction:column}
+  .hero-right{width:100%}
+  .features{flex-direction:column}
+  .quick-grid{flex-direction:column}
+}
